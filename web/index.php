@@ -15,7 +15,7 @@
             <ul class="navigation-list">
                 <li class="navigation-item"><a href="index.php" class="navigation-link">Homepage</a></li>
                 <li class="navigation-item"><a href="assignments.php" class="navigation-link">Assignments</a></li>
-                <li class="navigation-item"><a href="#" class="navigation-link">About Me</a></li>
+                <li class="navigation-item"><a href="about.php" class="navigation-link">About Me</a></li>
             </ul>
         </nav>
     </div>
@@ -49,7 +49,7 @@
                     <ul class="footer-list">
                         <li class="footer-item"><a href="assignments.php" class="footer-link">Assignments</a></li>
                         <li class="footer-item"><a href="https://fhwebdeveloper.com/portfolio" class="footer-link" target="_blank">View Portfolio</a></li>
-                        <li class="footer-item"><a href="#" class="footer-link">About Me</a></li>
+                        <li class="footer-item"><a href="about.php" class="footer-link">About Me</a></li>
                     </ul>
                 </div>
                 <p class="footer-copyright">&copy; <?php echo date("Y"); ?> - All Rights Reserved - Fernando Hernandez</p>

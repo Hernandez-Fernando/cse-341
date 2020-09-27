@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments | Fernando Hernandez Portal</title>
+    <title>About Me | Fernando Hernandez Portal</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
             <section class="section-main">
                 <div class="u-center-text">
                     <h1 class="heading-primary gradient-text">Coming Soon</h1>
-                    <p class="paragraph">Sorry, I'm working on my assignments, so, please come back soon.</p>
+                    <p class="paragraph">Sorry, this page will be ready in the following days, so, please come back soon.</p>
                 </div>
             </section>
         </div>
