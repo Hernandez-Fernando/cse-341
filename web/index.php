@@ -32,8 +32,8 @@
             <section class="section-main">
                 <div class="col-1-of-2">
                     <h1 class="heading-primary moveInLeft">Designig and Developing great Websites and Apps</h1>
-                    <p class="paragraph">Hello and welcome! I created this website for my CSE 341 - Web Backend Development II class. Here will find all my assignments in for this class.</p>
-                    <p class="paragraph">I plan to continue improving this website and design and in the near future will subtitute my current portfolio website at <a href="https://fhwebdeveloper.com" target="_blank">fhwebdeveloper.com</a></p>
+                    <p class="paragraph">Hello and welcome! I created this website for my CSE 341 - Web Backend Development II class. Here, you will find all my assignments for this class.</p>
+                    <p class="paragraph">I plan to continue improving this website and design, and, in the near future, it will subtitute my current portfolio website at <a href="https://fhwebdeveloper.com" target="_blank">fhwebdeveloper.com</a>. You are free to visit it to learn more about my work.</p>
                     <a href="assignments.php" class="action-link u-margin-bottom-medium">View Assignments</a>
                 </div>
                 <div class="col-1-of-2 u-center-text">
