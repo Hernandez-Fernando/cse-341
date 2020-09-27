@@ -96,6 +96,11 @@ body {
   color: #C0C0C0;
   backface-visibility: hidden;
 }
+@media (max-width: 37.5em) {
+  .brand {
+    display: none;
+  }
+}
 .brand-main {
   display: block;
   font-size: 2.4rem;
@@ -524,6 +529,11 @@ body {
 
 .section-main {
   margin-top: 12rem;
+}
+@media (max-width: 37.5em) {
+  .section-main img {
+    max-width: 280px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

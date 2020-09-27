@@ -9,6 +9,9 @@ body {
 .brand {
 	color: $secondary;
 	backface-visibility: hidden;
+	@include respond(phone) {
+		display: none;
+	}
 	
 
 	&-main {
