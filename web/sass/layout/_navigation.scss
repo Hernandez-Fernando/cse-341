@@ -5,7 +5,7 @@
 	}
 	
 	&-checkbox:checked ~ &-background {
-		background-image: radial-gradient($gradient-light, $gradient-dark);
+		//background-image: radial-gradient($gradient-light, $gradient-dark);
 		transform: scale(100);
 	}
 	
@@ -14,27 +14,29 @@
 		opacity: 1;
 	}
 	
-	&-checkbox:checked + &-button {color: transparent;}
+	&-checkbox:checked + &-button {color: $gradient-light; background-color: $gradient-light;}
 	&-checkbox:checked + &-button &-icon {background-color: transparent;}
-	&-checkbox:checked + &-button &-icon::before {top: 0; transform: rotate(135deg); background-color: $primary;}
+	&-checkbox:checked + &-button &-icon::before {top: 0; transform: rotate(135deg); background-color: $primary; width: 2.5rem;}
 	&-checkbox:checked + &-button &-icon::after {top: 0; transform: rotate(-135deg); background-color: $primary; width: 2.5rem;}
 	
 	
 	&-button {
-		//background-color: $color-white;
-		//width: 6.5rem;
-		//height: 6.5rem;
-		//border-radius: 50%;
+		background-color: $primary;
+		width: 6.6rem;
+		height: 6.6rem;
+		border-radius: 50%;
 		position: fixed;
-		top: 3.2rem;
+		top: 3.1rem;
 		right: 8rem;
 		z-index: 2000;
+		color: $secondary;
 		//box-shadow: 0 1rem 3rem rgba($color-black, .2);
 		text-align: center;
 		cursor: pointer;
 		font-size: $default-fz;
 		display: flex;
 		align-items: center;
+		transition: all .1s cubic-bezier(0,1.04,1,-0.04);
 		
 		@include respond(tab-port) {
 			top: 4.12rem;
@@ -44,22 +46,25 @@
 		@include respond(phone) {
 			top: 3.12rem;
 			right: 3.12rem;
+			
 		}
 	}
 	
 	&-background {
-		width: 6rem;
-		height: 6rem;
+		width: 5rem;
+		height: 5rem;
 		border-radius: 50%;
 		position: fixed;
-		top: 3.2rem;
-		right: 8rem;
+		top: 3.4rem;
+		right: 8.2rem;
 		z-index: 1000;
-		transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
-		
+		//transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+		transition: transform .5s ease-in-out;
+		background-image: radial-gradient($gradient-light, $gradient-dark);
+
 		@include respond(tab-port) {
 			top: 4.5rem;
-			right: 4.5rem;
+			right: 4.5rem;	
 		}
 		
 		@include respond(phone) {
@@ -123,10 +128,11 @@
 	&-icon {
 		position: relative;
 		margin-left: 1rem;
+		padding-left: 2rem;
 		
 		&, &::before, &::after {
 			display: inline-block;
-			width: 2.8rem;
+			width: 2.4rem;
 			height: 2px;
 			background-color: $secondary;
 			transition: all .2s;
@@ -139,18 +145,17 @@
 		}
 		
 		&::before {
-			width: 2.5rem;
+			width: 2rem;
 			top: -.8rem;
 		}
 		
 		&::after {
-			width: 2.2rem;
+			width: 1.7rem;
 			top: .8rem;
 		}
 	}
 	
 	&-button:hover &-icon::before {top: -1rem;}
 	&-button:hover &-icon::after {top: 1rem;}
-			
-		
+
 }

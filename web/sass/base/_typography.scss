@@ -61,11 +61,28 @@ body {
 	&:hover {
 		text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
 		background-image: linear-gradient(to right, $gradient-light 0, $gradient-regular 50%,$gradient-dark);
-	-webkit-background-clip: text;
-	color: transparent;
+		-webkit-background-clip: text;
+		color: transparent;
 	}
 }
 
+.heading-secondary {
+	font-size: 2.7rem;
+	font-weight: 600;
+	display: inline-block;
+	color: $color-white;
+	transition: all .2s;
+	line-height: 1;
+	margin-bottom: 1.5rem;
+
+	@include respond(tab-port) {
+		font-size: 2.4rem;
+	}
+	
+	@include respond(phone) {
+		font-size: 2.1rem;
+	}
+}
 
 .paragraph {
 	font-size: $default-fz;
@@ -96,8 +113,8 @@ body {
 		margin-top: 6rem !important;
 	&:link, &:visited {
 		background-image: linear-gradient(to right, $gradient-light 0, $gradient-regular 50%,$gradient-dark);
-	-webkit-background-clip: text;
-	color: transparent;
+		-webkit-background-clip: text;
+		color: transparent;
 	}
 
 	&:hover, &:active {
@@ -110,4 +127,29 @@ body {
 	-webkit-background-clip: text;
 	color: transparent;
 	font-size: 6rem;
+}
+
+.list {
+
+    &-item {
+        font-size: $default-fz;
+    }
+
+    &-link {
+		cursor: pointer;
+		transition: all .2s;
+
+		&:link, &:visited {
+			color: $color-white;
+			text-decoration: underline;
+			text-decoration-color: $gradient-light;
+		}
+
+		&:hover, &:active {
+			text-decoration: none;
+			background-image: linear-gradient(to right, $gradient-light 0, $gradient-regular 50%,$gradient-dark);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+	}
 }

@@ -3,70 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments | Fernando Hernandez Portal</title>
+    <title>Team Assignments | Fernando Hernandez Portal</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="navigation">
-        <input type="checkbox" class="navigation-checkbox" id="nav-toggle">
-        <label for="nav-toggle" class="navigation-button">Menu<span class="navigation-icon">&nbsp;</span></label>
-        <div class="navigation-background">&nbsp;</div>
-        <nav class="navigation-nav">
-            <ul class="navigation-list">
-                <li class="navigation-item"><a href="index.php" class="navigation-link">Homepage</a></li>
-                <li class="navigation-item"><a href="assignments.php" class="navigation-link">Assignments</a></li>
-                <li class="navigation-item"><a href="about.php" class="navigation-link">About Me</a></li>
-            </ul>
-        </nav>
-    </div>
-    <header class="header">
-        <div class="row">
-            <h2 class="brand">
-                <span class="brand-main">Fernando Hernandez</span>
-                <span class="brand-sub">Web Designer &amp; Developer</span>
-            </h1>
-        </div>
-    </header>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
     <main class="main">
         <div class="row">
             <section class="section-main">
                 <div class="u-center-text">
-                    <h1 class="heading-primary gradient-text">Coming Soon</h1>
-                    <p class="paragraph">Sorry, I'm working on my assignments, so, please come back soon.</p>
+                    <h1 class="heading-primary gradient-text">Assignments</h1>
+                    <p class="paragraph">Here you can access my team and individual assignments for this class.</p>
                 </div>
             </section>
         </div>
-    </main>
-    <footer class="footer u-margin-bottom-big">
-        <div class="row">
+        <div class="row u-margin-top-big">
             <div class="col-1-of-2">
-                <div class="footer-navigation">
-                    <ul class="footer-list">
-                        <li class="footer-item"><a href="assignments.php" class="footer-link">Assignments</a></li>
-                        <li class="footer-item"><a href="https://fhwebdeveloper.com/portfolio" class="footer-link" target="_blank">View Portfolio</a></li>
-                        <li class="footer-item"><a href="about.php" class="footer-link">About Me</a></li>
-                    </ul>
-                </div>
-                <p class="footer-copyright">&copy; <?php echo date("Y"); ?> - All Rights Reserved - Fernando Hernandez</p>
+                <h2 class="heading-secondary">Team Assignments</h2>
+                <ul class="list">
+                    <li class="list-item"><a class="list-link" href="/assignments/teach/w02">W02 - Formating Cells With JS and jQuery</a></li>
+                    <li class="list-item"><a class="list-link" href="/assignments/teach/w03">W03 - Submiting Forms with PHP</a></li>
+                </ul>
             </div>
-            <div class="col-1-of-4 social-div">
-                    <a href="https://facebook.com/fhwebdeveloper" class="social-link" target="_blank">
-                        <svg class="social-icon">
-                            <use xlink:href="img/symbol-defs.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/fhwebdeveloper" class="social-link" target="_blank">
-                        <svg class="social-icon">
-                            <use xlink:href="img/symbol-defs.svg#icon-instagram"></use>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/fhwebdeveloper" class="social-link" target="_blank">
-                        <svg class="social-icon">
-                            <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
-                        </svg>
-                    </a>
+            <div class="col-1-of-2">
+                <h2 class="heading-secondary">Individual Assignments</h2>
+                <ul class="list">
+                    <li class="list-item"><a class="list-link" href="#">Nothing Yet</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </main>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
 </body>
 </html>
