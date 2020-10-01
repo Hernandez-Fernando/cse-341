@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Assignments | Fernando Hernandez Portal</title>
+    <title>Assignments | Fernando Hernandez Portal</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
