@@ -1,0 +1,136 @@
+.header {
+  background-color: #FFF;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header .logo-box h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-left: 1.1rem;
+}
+.header .logo {
+  height: 70px;
+}
+.header .user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.header .user-nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .user-nav > *:hover {
+  background-color: var(--color-grey-light-2);
+}
+.header .user-nav-link:link, .header .user-nav-link:visited {
+  cursor: pointer;
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header .user-nav-link:hover, .header .user-nav-link:active {
+  color: #ffba00;
+}
+.header .user-nav-icon-box {
+  position: relative;
+}
+.header .user-nav-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: #222;
+}
+.header .user-nav-notification {
+  font-size: 0.8rem;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #ffba00;
+  border-radius: 50%;
+  color: #222;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: #222;
+}
+
+.product {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product:hover .product-container .product-image {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.product-container {
+  width: 100%;
+  overflow: hidden;
+}
+.product-image {
+  transition: all 0.2s;
+}
+.product-name {
+  font-size: 1rem;
+}
+.product-price {
+  font-size: 0.9rem;
+  display: flex;
+}
+.product-price-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: #222;
+  margin-right: 0.8rem;
+}
+
+.product-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.product-cart:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.product-cart-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-cart-image {
+  height: 100px;
+}
+.product-cart-name {
+  font-size: 1rem;
+}
+.product-cart-price {
+  font-size: 0.9rem;
+  display: flex;
+}
+.product-cart-icon {
+  height: 1.1rem;
+  width: 1.1rem;
+  fill: #dc3545;
+  margin-right: 0.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

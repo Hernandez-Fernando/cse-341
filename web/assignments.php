@@ -28,7 +28,7 @@
             <div class="col-1-of-2">
                 <h2 class="heading-secondary">Individual Assignments</h2>
                 <ul class="list">
-                    <li class="list-item"><a class="list-link" href="#">Nothing Yet</a></li>
+                    <li class="list-item"><a class="list-link" href="/assignments/prove/W03">W03 - Shopping Cart Simulation</a></li>
                 </ul>
             </div>
         </div>

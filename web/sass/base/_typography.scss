@@ -132,7 +132,8 @@ body {
 .list {
 
     &-item {
-        font-size: $default-fz;
+		font-size: $default-fz;
+		margin-bottom: 1.5rem;
     }
 
     &-link {
