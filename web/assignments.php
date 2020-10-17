@@ -23,6 +23,7 @@
                 <ul class="list">
                     <li class="list-item"><a class="list-link" href="/assignments/teach/W02">W02 - Formating Cells With JS and jQuery</a></li>
                     <li class="list-item"><a class="list-link" href="/assignments/teach/W03">W03 - Submiting Forms with PHP</a></li>
+                    <li class="list-item"><a class="list-link" href="/assignments/teach/W05">W05 - Scriptures Database</a></li>
                 </ul>
             </div>
             <div class="col-1-of-2">

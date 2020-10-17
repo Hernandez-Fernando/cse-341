@@ -6,6 +6,7 @@
             <ul class="navigation-list">
                 <li class="navigation-item"><a href="index.php" class="navigation-link">Homepage</a></li>
                 <li class="navigation-item"><a href="assignments.php" class="navigation-link">Assignments</a></li>
+                <li class="navigation-item"><a href="/projects/poolway/" class="navigation-link">Projects</a></li>
                 <li class="navigation-item"><a href="about.php" class="navigation-link">About Me</a></li>
             </ul>
         </nav>
