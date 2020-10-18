@@ -1,6 +1,11 @@
 <?php
-require_once(__DIR__ . 'connections.php');
-require_once(__DIR__ . 'model.php');
+// Error Bugging File
+
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
+require_once 'connections.php';
+require_once 'model.php';
 
 
 $action = filter_input(INPUT_POST, 'action');
