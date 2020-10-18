@@ -56,7 +56,7 @@
 						<label for="">State</label>
 						<select name="customerState" id="customerState" class="custom-select" required>
 							<option value="" selected>Choose...</option>
-							<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/states.php'; ?>
+							<?php include $_SERVER['DOCUMENT_ROOT'] . '/projects/poolway/common/states.php'; ?>
 						</select>
 					</div>
 					<div class="col form-group">
