@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 1);
+	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
 	require_once(__DIR__ . '/library/connections.php');
@@ -117,7 +117,7 @@ ini_set('display_errors', 1);
 	 var customerList = document.getElementById('customerList');
 	 var customer = customerList.options[customerList.selectedIndex].value;
 		 if (customer == "new") {
-		 	window.location.pathname = '/new-customer.php';
+		 	window.location.pathname = '/projects/poolway/new-customer.php';
 			console.log('Working');
 		 } else {
 			 var form = document.getElementById('newPool');
