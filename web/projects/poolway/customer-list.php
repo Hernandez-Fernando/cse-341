@@ -1,3 +1,10 @@
+<?php
+	//require_once 'projects/poolway/library/connections.php';
+	require_once 'projects/poolway/library/model.php';
+	//require_once 'library/functions.php';
+
+	$customerList = getCustomerList();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
