@@ -32,8 +32,8 @@ error_reporting(E_ALL);
 				</div>
 				<?php
 				foreach ($customerList as $customer) { ?>
-				<div class="row customer-row"><?= implode(" ",$customer); ?>
-					<div class="name col-3"><p><?= $customer['firstName'] . ' ' . $customer['lastName']; ?></p></div>
+				<div class="row customer-row">
+					<div class="name col-3"><p><?= $customer['firstname'] . ' ' . $customer['lastname']; ?></p></div>
 					<div class="address col-4"><p><?= $customer['address'] . ', ' . $customer['city'] . ', ' . $customer['state'] . ' ' . $customer['zcode']; ?></p></div>
 					<div class="phone col-2"><p><?= $customer['phone']; ?></p></div>
 					<div class="options col-3"><p><a href="customer-single.php?<?=$customer['customerId'];?>">Profile</a> | <a href="#">Edit</a></p></div>
