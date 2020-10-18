@@ -24,14 +24,15 @@ switch ($action) {
         $regOutcome = registerCustomer($firstName, $lastName, $customerAddress, $customerCity, $customerState, $customerZipcode, $phone, $email);
 		
         if($regOutcome ===1) {
-            $customerId = getNewCustomerId($email);
+            //$customerId = getNewCustomerId($email);
+			$customerId = 20;
             $displayName = filter_input(INPUT_POST, 'displayName', FILTER_SANITIZE_STRING);
             $poolAddress = filter_input(INPUT_POST, 'poolAddress', FILTER_SANITIZE_STRING);
             $poolCity = filter_input(INPUT_POST, 'poolCity', FILTER_SANITIZE_STRING);
             $poolState = filter_input(INPUT_POST, 'poolState', FILTER_SANITIZE_STRING);
             $poolZipcode = filter_input(INPUT_POST, 'poolZipcode', FILTER_SANITIZE_STRING);
 
-            $poolOutcome = registerPool($customerId['customerid'], $displayName, $poolAddress, $poolCity, $poolState, $poolZipcode);
+            $poolOutcome = registerPool($customerId, $displayName, $poolAddress, $poolCity, $poolState, $poolZipcode);
 
             if($poolOutcome ===1) {
                 $message = "<div class='alert alert-success' role='alert'>
