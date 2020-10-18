@@ -9,6 +9,7 @@ if ($action == NULL){
 }
 
 switch ($action) {
+	
     case 'newCustomer':
         $firstName = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_STRING);
         $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_STRING);
@@ -21,6 +22,7 @@ switch ($action) {
         
 
         $regOutcome = registerCustomer($firstName, $lastName, $customerAddress, $customerCity, $customerState, $customerZipcode, $phone, $email);
+		
         if($regOutcome ===1) {
             $customerId = getNewCustomerId($email);
             $displayName = filter_input(INPUT_POST, 'displayName', FILTER_SANITIZE_STRING);
@@ -29,7 +31,7 @@ switch ($action) {
             $poolState = filter_input(INPUT_POST, 'poolState', FILTER_SANITIZE_STRING);
             $poolZipcode = filter_input(INPUT_POST, 'poolZipcode', FILTER_SANITIZE_STRING);
 
-            $poolOutcome = registerPool($customerId['customerId'], $displayName, $poolAddress, $poolCity, $poolState, $poolZipcode);
+            $poolOutcome = registerPool($customerId['customerid'], $displayName, $poolAddress, $poolCity, $poolState, $poolZipcode);
 
             if($poolOutcome ===1) {
                 $message = "<div class='alert alert-success' role='alert'>
