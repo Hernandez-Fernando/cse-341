@@ -20,48 +20,48 @@
 			</nav>
 			-->
 			<h2 class="pl-3 mb-3">New Customer Information</h2>
-			<form action="" id="newCustomer" class="col-10">
+			<form action="library/controller.php" method="post" id="newCustomer" class="col-10">
 				<div class="form-row">
 					<div class="col form-group">
-						<label for="">Fist Name</label>
-						<input id="firstName" type="text" class="form-control" required>
+						<label for="">First Name</label>
+						<input id="firstName" name="firstName" type="text" class="form-control" required>
 					</div>
 					<div class="col form-group">
 						<label for="">Last Name</label>
-						<input id="lastName" type="text" class="form-control" required>
+						<input id="lastName" name="lastName" type="text" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col form-group">
 						<label for="">Phone Number</label>
-						<input type="tel" class="form-control" required>
+						<input type="tel" name="phone" class="form-control" required>
 					</div>
 					<div class="col form-group">
 						<label for="">Email</label>
-						<input type="email" class="form-control">
+						<input type="email" name="email" class="form-control">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col form-group">
 						<label for="">Address</label>
-						<input id="customerAddress" type="text" class="form-control" required>
+						<input id="customerAddress" name="customerAddress" type="text" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col-7 form-group">
 						<label for="">City</label>
-						<input id="customerCity" type="text" class="form-control" required>
+						<input id="customerCity" name="customerCity" type="text" class="form-control" required>
 					</div>
 					<div class="col form-group">
 						<label for="">State</label>
-						<select name="" id="customerState" class="custom-select" required>
+						<select name="customerState" id="customerState" class="custom-select" required>
 							<option value="" selected>Choose...</option>
 							<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/states.php'; ?>
 						</select>
 					</div>
 					<div class="col form-group">
 						<label for="">Zip</label>
-						<input id="customerZip" type="text" class="form-control" required/>
+						<input id="customerZipcode" name="customerZipcode" type="text" class="form-control" required/>
 					</div>
 				</div>
 				<div class="form-row">
@@ -73,8 +73,8 @@
 				<h3 class="mt-4 h4">Pool Information</h3>
 				<div class="form-row">
 					<div class="col-7 form-group">
-						<label for="">Nickname</label>
-						<input id="poolNickname" type="text" class="form-control" required>
+						<label for="">Display Name</label>
+						<input id="poolDisplayName" type="text" class="form-control" required>
 					</div>
 					<div class="col form-group ml-4 mt-4">
 						<input type="checkbox" class="form-check-input" id="poolNicknameBox" onclick="checkNickname()">
@@ -104,6 +104,7 @@
 						<input id="poolZip" type="text" class="form-control" required/>
 					</div>
 				</div>
+				<!--
 				<div class="form-row">
 					<div class="col form-group">
 						<label for="">Access Code</label>
@@ -135,8 +136,9 @@
 							<option value="">Friday</option>
 						</select>
 					</div>
-				</div>
+				</div> -->
 				<button class="btn btn-primary mt-3" type="submit">Register Customer</button>
+				<input type="hidden" name="action" value="newCustomer">
 			</form>
 		</div>
 	</section>
@@ -154,7 +156,7 @@
 			poolAddress.value = document.getElementById('customerAddress').value;
 			poolCity.value = document.getElementById('customerCity').value;
 			poolState.value = document.getElementById('customerState').value;
-			poolZip.value = document.getElementById('customerZip').value;
+			poolZip.value = document.getElementById('customerZipcode').value;
 			
 			// Put ReadOnly Attribute to Pool Inputs
 			poolAddress.readOnly = true;
@@ -178,7 +180,7 @@
 	
 	function checkNickname() {
 		var checkbox = document.getElementById('poolNicknameBox');
-		var poolNickname = document.getElementById('poolNickname');
+		var poolNickname = document.getElementById('poolDisplayName');
 		
 		if(checkbox.checked == true) {
 			var firstName = document.getElementById('firstName').value;
