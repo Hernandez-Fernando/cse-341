@@ -28,7 +28,7 @@
 				<?php
 				foreach ($poolList as $pool) { ?>
 				<div class="row customer-row">
-					<div class="name col-2"><p><?= $pool['displayName']; ?></p></div>
+					<div class="name col-2"><p><?= $pool['displayname']; ?></p></div>
 					<div class="address col-5"><p><?= $pool['address'] . ', ' . $pool['city'] . ', ' . $pool['state'] . ' ' . $pool['zcode']; ?></p></div>
 					<?php if($pool['status'] == 'On Service') { ?>
 					<div class="phone col-2"><p class="text-success">On Service</p></div>
