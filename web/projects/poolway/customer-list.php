@@ -1,5 +1,5 @@
 <?php
-	require_once 'library/connections.php';
+	require_once '/projects/poolway/library/connections.php';
 	require_once 'library/model.php';
 	require_once 'library/functions.php';
 
