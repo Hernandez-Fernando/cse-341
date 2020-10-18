@@ -1,7 +1,7 @@
 <?php
 
 function getCustomerList() {
-	$db = dbConnection();
+	//$db = dbConnection();
 	//$sql = 'SELECT customerId, firstName, lastName, address, city, state, zcode, phone FROM customers ORDER BY firstName ASC';
 	$stmt = $db->prepare('SELECT customerId, firstName, lastName, address, city, state, zcode, phone FROM customers ORDER BY firstName ASC');
 	$stmt->execute();
