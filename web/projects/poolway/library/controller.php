@@ -1,9 +1,4 @@
 <?php
-// Error Bugging File
-
-	ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
 require_once 'connections.php';
 require_once 'model.php';
 
@@ -27,17 +22,54 @@ switch ($action) {
 
         $regOutcome = registerCustomer($firstName, $lastName, $customerAddress, $customerCity, $customerState, $customerZipcode, $phone, $email);
         if($regOutcome ===1) {
-            $message = "<div class='alert alert-success' role='alert'>
-            <h4 class='alert-heading'>User Created!</h4>
-            <p>The user has been created successfuly.</p>
-            </div>";
-            header('Location: ../customer-list.php');
+            $customerId = getNewCustomerId($email);
+            $displayName = filter_input(INPUT_POST, 'displayName', FILTER_SANITIZE_STRING);
+            $poolAddress = filter_input(INPUT_POST, 'poolAddress', FILTER_SANITIZE_STRING);
+            $poolCity = filter_input(INPUT_POST, 'poolCity', FILTER_SANITIZE_STRING);
+            $poolState = filter_input(INPUT_POST, 'poolState', FILTER_SANITIZE_STRING);
+            $poolZipcode = filter_input(INPUT_POST, 'poolZipcode', FILTER_SANITIZE_STRING);
+
+            $poolOutcome = registerPool($customerId['customerId'], $displayName, $poolAddress, $poolCity, $poolState, $poolZipcode);
+
+            if($poolOutcome ===1) {
+                $message = "<div class='alert alert-success' role='alert'>
+                <h4 class='alert-heading'>User Created!</h4>
+                <p>The user has been created successfuly.</p>
+                </div>";
+                header('Location: ../customer-list.php');
+            }
         } else {
             $message = "<div class='alert alert-danger' role='alert'>
             <h4 class='alert-heading'>User was not Created!</h4>
             <p>There's an error and the customer cannot be register at the moment.</p>
             </div>";
             header('Location: ../new-customer.php');
+        }
+    break;
+
+    case 'newPool':
+        
+            $customerId = filter_input(INPUT_POST, 'customerId', FILTER_SANITIZE_NUMBER_INT);
+            $displayName = filter_input(INPUT_POST, 'displayName', FILTER_SANITIZE_STRING);
+            $poolAddress = filter_input(INPUT_POST, 'poolAddress', FILTER_SANITIZE_STRING);
+            $poolCity = filter_input(INPUT_POST, 'poolCity', FILTER_SANITIZE_STRING);
+            $poolState = filter_input(INPUT_POST, 'poolState', FILTER_SANITIZE_STRING);
+            $poolZipcode = filter_input(INPUT_POST, 'poolZipcode', FILTER_SANITIZE_STRING);
+
+            $poolOutcome = registerPool($customerId, $displayName, $poolAddress, $poolCity, $poolState, $poolZipcode);
+
+            if($poolOutcome ===1) {
+                $message = "<div class='alert alert-success' role='alert'>
+                <h4 class='alert-heading'>Pool Created!</h4>
+                <p>The pool has been created successfuly.</p>
+                </div>";
+                header('Location: ../pool-list.php');
+            } else {
+            $message = "<div class='alert alert-danger' role='alert'>
+            <h4 class='alert-heading'>Pool was not Created!</h4>
+            <p>There's an error and the pool cannot be register at the moment.</p>
+            </div>";
+            header('Location: ../new-pool.php');
         }
     break;
 }

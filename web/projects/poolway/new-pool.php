@@ -1,13 +1,19 @@
+<?php
+	require_once(__DIR__ . '/library/connections.php');
+	require_once(__DIR__ . '/library/model.php');
+
+	$customerList = getCustomerListShort();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Add New Pool</title>
-	<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/head.php'; ?>
+	<?php include $_SERVER['DOCUMENT_ROOT'] . '/projects/poolway/common/head.php'; ?>
 </head>
 
 <body>
-	<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
+	<?php include $_SERVER['DOCUMENT_ROOT'] . '/projects/poolway/common/header.php'; ?>
 	<section class="main">
 		<div class="dashboard container py-4 pb-5">
 			<!--
@@ -20,22 +26,15 @@
 			</nav>
 			-->
 			<h2 class="pl-3 mb-3">Add New Pool</h2>
-			<form action="" id="newPool" class="col-10 pool-form form-collapsed">
+			<form action="library/controller.php" method="post" id="newPool" class="col-10 pool-form form-collapsed">
 				<div class="form-row">
 					<div class="col form-group row">
 						<label for="" class="col-3 col-form-label">Select Customer</label>
-						<select name="" id="customerList" class="custom-select col-6" required onchange="checkCustomer()">
+						<select name="customerId" id="customerList" class="custom-select col-6" required onchange="checkCustomer()">
 							<option value="" selected>Choose...</option>
-							<option value="">Elisa Myers</option>
-							<option value="">Hector	Nichols</option>
-							<option value="">Pablo Roberson</option>
-							<option value="">Essie Ross</option>
-							<option value="">Elvira Poole</option>
-							<option value="">Jessie Dennis</option>
-							<option value="">Geoffrey Oliver</option>
-							<option value="">Virginia Gray</option>
-							<option value="">Neal Logan</option>
-							<option value="">Gilberto Hansen</option>
+							<?php foreach ($customerList as $customer) { ?>
+							<option value="<?= $customer['customerId']; ?>"><?= $customer['firstName'] . " " . $customer['lastName']; ?></option>
+							<?php }; ?>
 							<option value="new">New Customer...</option>
 						</select>
 					</div>
@@ -44,32 +43,33 @@
 				<div class="form-row">
 					<div class="col-8 form-group">
 						<label for="">Nickname</label>
-						<input id="poolNickname" type="text" class="form-control" required>
+						<input id="poolDisplayName" name="displayName" type="text" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col form-group">
 						<label for="">Address</label>
-						<input id="poolAddress" type="text" class="form-control" required>
+						<input id="poolAddress" name="poolAddress" type="text" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col-7 form-group">
 						<label for="">City</label>
-						<input id="poolCity" type="text" class="form-control" required>
+						<input id="poolCity" name="poolCity" type="text" class="form-control" required>
 					</div>
 					<div class="col form-group">
 						<label for="">State</label>
-						<select name="" id="poolState" class="custom-select" required>
+						<select name="poolState" id="poolState" class="custom-select" required>
 							<option value="" selected>Choose...</option>
-							<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/states.php'; ?>
+							<?php include $_SERVER['DOCUMENT_ROOT'] . '/projects/poolway/common/states.php'; ?>
 						</select>
 					</div>
 					<div class="col form-group">
 						<label for="">Zip</label>
-						<input id="poolZip" type="text" class="form-control" required/>
+						<input id="poolZip" name="poolZipcode" type="text" class="form-control" required/>
 					</div>
 				</div>
+				<!--
 				<div class="form-row">
 					<div class="col form-group">
 						<label for="">Access Code</label>
@@ -101,12 +101,13 @@
 							<option value="">Friday</option>
 						</select>
 					</div>
-				</div>
+				</div> -->
 				<button class="btn btn-primary mt-3" type="submit">Add Pool</button>
+				<input type="hidden" name="action" value="newPool">
 			</form>
 		</div>
 	</section>
-	<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
+	<?php include $_SERVER['DOCUMENT_ROOT'] . '/projects/poolway/common/footer.php'; ?>
 
  <script>
 	 function checkCustomer() {
@@ -122,6 +123,6 @@
 	 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/scripts.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/projects/poolway/common/scripts.php'; ?>
 </body>
 </html>
