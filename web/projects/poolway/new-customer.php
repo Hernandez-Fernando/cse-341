@@ -1,4 +1,4 @@
-<?php require_once(__DIR__ . '/common.debuging.php'); ?>
+<?php require_once(__DIR__ . '/common/debuging.php'); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
