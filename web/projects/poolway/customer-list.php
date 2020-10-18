@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 	require_once(__DIR__ . '/library/model.php');
 	//require_once 'library/functions.php';
 
-	$customerList = getCustomerList($db);
+	$customerList = getCustomerList();
 ?>
 <!DOCTYPE HTML>
 <html>

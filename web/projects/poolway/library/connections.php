@@ -1,6 +1,6 @@
 <?php
 //Datebase Connections
-/*
+
 function dbConnection(){
 	try
 		{
@@ -25,10 +25,9 @@ function dbConnection(){
 		}
 }
 
-dbConnection(); */
+dbConnection();
 
-
-try
+/* try
 		{
 		  $dbUrl = getenv('DATABASE_URL');
 		
@@ -49,5 +48,5 @@ try
 		  echo 'Error!: ' . $ex->getMessage();
 		  die();
 	  }
-
+*/
 ?>
