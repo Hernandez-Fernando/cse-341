@@ -107,39 +107,6 @@
 						<input id="poolZip" name="poolZipcode" type="text" class="form-control" required/>
 					</div>
 				</div>
-				<!--
-				<div class="form-row">
-					<div class="col form-group">
-						<label for="">Access Code</label>
-						<input type="text" class="form-control">
-					</div>
-					<div class="col form-group">
-						<label for="">Gate Code</label>
-						<input type="text" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="col form-group">
-						<label for="">Filter Type</label>
-						<select name="" id="" class="custom-select" required>
-							<option value="" selected>Choose...</option>
-							<option value="Cartridge">Cartridge</option>
-							<option value="DE">DE</option>
-							<option value="Sand">Sand</option>
-						</select>
-					</div>
-					<div class="col form-group">
-						<label for="">Service Day</label>
-						<select name="" id="" class="custom-select" required>
-							<option value="" selected>Choose...</option>
-							<option value="">Monday</option>
-							<option value="">Tuesday</option>
-							<option value="">Wednesday</option>
-							<option value="">Thursday</option>
-							<option value="">Friday</option>
-						</select>
-					</div>
-				</div> -->
 				<button class="btn btn-primary mt-3" type="submit">Register Customer</button>
 				<input type="hidden" name="action" value="newCustomer">
 			</form>
