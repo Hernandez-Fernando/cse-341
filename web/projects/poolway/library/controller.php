@@ -1,6 +1,6 @@
 <?php
-require_once 'connections.php';
-require_once 'model.php';
+require_once(__DIR__ . 'connections.php');
+require_once(__DIR__ . 'model.php');
 
 
 $action = filter_input(INPUT_POST, 'action');
