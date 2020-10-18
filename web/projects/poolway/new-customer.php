@@ -74,7 +74,7 @@
 				<div class="form-row">
 					<div class="col-7 form-group">
 						<label for="">Display Name</label>
-						<input id="poolDisplayName" type="text" class="form-control" required>
+						<input id="poolDisplayName" name="displayName" type="text" class="form-control" required>
 					</div>
 					<div class="col form-group ml-4 mt-4">
 						<input type="checkbox" class="form-check-input" id="poolNicknameBox" onclick="checkNickname()">
@@ -84,24 +84,24 @@
 				<div class="form-row">
 					<div class="col form-group">
 						<label for="">Address</label>
-						<input id="poolAddress" type="text" class="form-control" required>
+						<input id="poolAddress" name="poolAddress" type="text" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col-7 form-group">
 						<label for="">City</label>
-						<input id="poolCity" type="text" class="form-control" required>
+						<input id="poolCity" name="poolCity" type="text" class="form-control" required>
 					</div>
 					<div class="col form-group">
 						<label for="">State</label>
-						<select name="" id="poolState" class="custom-select" required>
+						<select name="poolState" id="poolState" class="custom-select" required>
 							<option value="" selected>Choose...</option>
 							<?php include $_SERVER['DOCUMENT_ROOT'] . '/projects/poolway/common/states.php'; ?>
 						</select>
 					</div>
 					<div class="col form-group">
 						<label for="">Zip</label>
-						<input id="poolZip" type="text" class="form-control" required/>
+						<input id="poolZip" name="poolZipcode" type="text" class="form-control" required/>
 					</div>
 				</div>
 				<!--
