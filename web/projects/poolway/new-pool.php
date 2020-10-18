@@ -33,7 +33,7 @@
 						<select name="customerId" id="customerList" class="custom-select col-6" required onchange="checkCustomer()">
 							<option value="" selected>Choose...</option>
 							<?php foreach ($customerList as $customer) { ?>
-							<option value="<?= $customer['customerId']; ?>"><?= $customer['firstName'] . " " . $customer['lastName']; ?></option>
+							<option value="<?= $customer['customerid']; ?>"><?= $customer['firstname'] . " " . $customer['lastname']; ?></option>
 							<?php }; ?>
 							<option value="new">New Customer...</option>
 						</select>
